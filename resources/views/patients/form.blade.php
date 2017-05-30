@@ -6,7 +6,12 @@
 
 <div class="form-group">
     <label for="">Last name</label>
-    {{ Form::text('last_name', null, ['class' => 'form-control'])}}
+    {{-- {{ Form::text('last_name', null, ['class' => 'form-control'])}} --}}
+    {{-- {{ Form::text('first_name', null, ['class' => 'form-control'])}} --}}
+    <input
+        type="text"
+        name="last_name"
+        class="form-control" value="{{ old('last_name') }}">
 </div>
 
 <div class="form-group">

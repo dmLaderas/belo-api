@@ -8,15 +8,18 @@
     <link href="/css/dashboard.css" rel="stylesheet">
   </head>
   <body>
-    @include('partials.header')
-    <div class="container-fluid">
-        <div class="row">
-        @include('partials.sidebar')
-        </div>
+    <div id="app">
+        @include('partials.header')
+        <div class="container-fluid">
+            <div class="row">
+            @include('partials.sidebar')
+            </div>
 
-        <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
-        @yield('content')
-        </main>
+            <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+            @yield('content')
+            </main>
+        </div>
     </div>
+    <script src="{{ mix('/js/app.js') }}"></script>
   </body>
 </html>

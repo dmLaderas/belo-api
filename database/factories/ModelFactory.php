@@ -43,3 +43,11 @@ $factory->define(Belo\Patient::class, function (Faker\Generator $faker) {
 
     ];
 });
+
+$factory->define(Belo\LoyaltyCard::class, function (Faker\Generator $faker) {
+    return [
+        'card_number' => $faker->creditCardNumber,
+        'issued_at' => $faker->dateTime(),
+        'patient_id' => $faker->numberBetween(1, 100)
+    ];
+});

@@ -54,8 +54,8 @@ class PatientController extends Controller
     {
         $patient->load('illnesses');
 
-        // return $patient;
-        return fractal($patient, new PatientTransformer())->toArray();
+        return $patient;
+        // return fractal($patient, new PatientTransformer())->toArray();
     }
 
     /**
